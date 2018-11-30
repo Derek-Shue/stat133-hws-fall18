@@ -1,5 +1,6 @@
 # devtools
 library(devtools)
+library(roxygen2)
 
 # create documentation
 devtools::document()

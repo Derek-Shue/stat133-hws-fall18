@@ -2,6 +2,7 @@
 #' @descriptioin check if the sides are valid
 #' @param sides of a die (numeric vector)
 #' @return TRUE or FALSE
+#' @export
 check_sides <- function(a){
   if (length(a) < 2){
     stop("sides must contain more than one element")
@@ -19,6 +20,7 @@ check_sides <- function(a){
 #' @description checks if probability input is valid
 #' @param probability for each side of the die (numeric vector)
 #' @return TRUE or FALSE
+#' @export
 check_prob <- function(prob){
   if (class(prob) != "numeric"){
     stop("prob must be numeric")
@@ -38,6 +40,7 @@ check_prob <- function(prob){
 #' @description displays the class of the object as well as a tabular display of the sides and probabilities
 #' @param device object
 #' @return none
+#' @export
 print.device <- function(x){
   cat('object "device"\n\n')
   cd <- data.frame(

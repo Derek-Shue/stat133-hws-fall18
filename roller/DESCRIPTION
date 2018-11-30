@@ -6,3 +6,4 @@ Author: Derek Shue
 Description: This package contains functions that simulate creating and rolling a device with a number of sides and correlated probabilities. 
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 6.1.1

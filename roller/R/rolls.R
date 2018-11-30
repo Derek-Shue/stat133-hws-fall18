@@ -2,8 +2,9 @@
 #' @description checks to see if the die is rolled a valid number of times
 #' @param number of times rolled (int)
 #' @return TRUE or FALSE
+#' @export
 check_times <- function(times){
-  if ((times < 1) | (times %% 1 != 1)){
+  if ((times < 1) | (times %% 1 != 0)){
     return(FALSE)
   }
   return(TRUE)
@@ -13,6 +14,7 @@ check_times <- function(times){
 #' @description displays the class of the object as well as the generated rolls
 #' @param rolls object
 #' @return none
+#' @export
 print.rolls <- function(x){
   cat('object "rolls"\n\n')
   rolls = sample(x$sides, x$total, replace = TRUE, x$prob)
@@ -25,6 +27,7 @@ print.rolls <- function(x){
 #' @param device (object of class 'device')
 #' @param number of times rolled (int)
 #' @return a "rolls" object
+#' @export
 roll <- function(device, times = 1){
   if(class(device) != "device"){
     stop("device must be of class device")
@@ -43,6 +46,7 @@ roll <- function(device, times = 1){
 #' @description summarizes the results of a number of rolls
 #' @param a rolls object
 #' @return a table summarizing the rolls
+#' @export
 summary.rolls <- function(x, ...){
   count = rep(0,length(x$sides))
   for (i in 1:length(x$rolls)){
@@ -66,35 +70,9 @@ summary.rolls <- function(x, ...){
 #' @description prints the summary of a number of rolls
 #' @param a summary of rolls
 #' @return none
+#' @export
 print.summary.rolls <- function(x, ...){
   cat('summary "rolls"\n\n')
   print(x$freqs)
   invisible(x)
-}
-
-#' @title rolls extraction
-#' @description extracts the value of a given roll
-#' @param a rolls object
-#' @return the value of a given roll
-"[.rolls" <- function(x, i){
-  x$rolls[i]
-}
-
-#' @title rolls replacement
-#' @description replaces the value of a given roll
-#' @param a rolls object
-#' @return none
-"[<-.rolls" <- function(x, i, value){
-  x$rolls[i] <- value
-  return(x)
-}
-
-#' @title rolls addition
-#' @description adds more rolls to a rolls object
-#' @param a rolls object
-#' @return none
-"+.rolls" <- function(x, incr){
-  x$rolls = c(x$rolls, sample(x$sides, incr, replace = TRUE, x$prob))
-  x$total = x$total + incr
-  return(x)
 }
