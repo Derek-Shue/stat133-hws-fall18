@@ -1,0 +1,71 @@
+---
+title: "Introduction to rolling devices"
+author: "Derek Shue"
+date: "November 28, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Roller
+
+The package "roller" simulates the creation of a device with a specified number of sides and correlated probabilities and also simulates rolling that device a number of times. 
+
+## Creating a device
+
+A device can be created with the function device(). If no specifications are added, a device with two sides of numbers 1 and 2 is created, with the probability of each side being 0.5.
+
+```{r}
+device <- device()
+device
+```
+
+Specifications can be added by changing the 'sides' and 'prob' arguments. 
+
+```{r}
+device <- device(sides = c('a', 'b'), prob = c(0.7, 0.3))
+device
+```
+
+## Rolling the device
+
+The roll() function will roll a device a specified number of times and then output a "rolls" object that contains the result of the rolls. 
+
+```{r}
+# rolling a fair die 50 times
+fair_die <- device()
+set.seed(123)
+fair50 <- roll(fair_die, times = 50)
+fair50
+```
+
+The summary() function outputs a table containing the sides of the device, the count for each result, and the probabaility associated with each result.
+
+```{r}
+summary(fair50)
+```
+
+## Plotting roll results
+
+The plot method outputs a barchart of relative frequencies of each roll. 
+
+```{r, fig.show = 'hold'}
+plot(fair50)
+```
+
+## Additional Methods
+
+You can manipulate a "rolls" object by using the extraction, replacement, and addition methods. 
+```{r}
+# extracting a value
+fair50[50]
+# replacing a value
+fair50[50] <- 'a'
+fair50[50]
+# adding additional rolls
+summary(fair50)
+fair60 <- fair50 + 10
+summary(fair60)
+```

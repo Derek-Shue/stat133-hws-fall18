@@ -1,0 +1,1 @@
+Workout 2 by Derek Shue - This assignment contains a number of functions as well as tests for those functions that apply concepts learned in Stat133, including creating functions, using Roxygen comments, if-conditionals, loop structures, and manipulation of strings. 

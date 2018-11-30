@@ -1,0 +1,81 @@
+# A tibble: 30 x 15
+# Groups:   salary [30]
+   team  experience  salary points3
+   <chr>      <int>   <dbl>   <int>
+ 1 ATL          100 9.34e-5     660
+ 2 BOS           63 9.19e-5     985
+ 3 BRK           70 7.62e-5     777
+ 4 CHI           59 9.25e-5     565
+ 5 CHO           63 8.85e-5     808
+ 6 CLE          145 1.27e-4    1030
+ 7 DAL           65 9.28e-5     712
+ 8 DEN           83 7.90e-5     868
+ 9 DET           55 1.03e-4     631
+10 GSW          113 1.00e-4     982
+# ... with 20 more rows, and 11 more
+#   variables: points2 <int>,
+#   points1 <int>, points <int>,
+#   off_rebounds <int>,
+#   def_rebounds <int>, assists <int>,
+#   steals <int>, blocks <int>,
+#   turnovers <int>, fouls <int>,
+#   efficiency <dbl>
+# A tibble: 30 x 15
+   team  experience  salary points3
+   <chr>      <int>   <dbl>   <int>
+ 1 PHI           39 5.63e-5     718
+ 2 MIN           48 5.99e-5     599
+ 3 MIA           63 7.29e-5     799
+ 4 PHO           73 7.33e-5     569
+ 5 BRK           70 7.62e-5     777
+ 6 DEN           83 7.90e-5     868
+ 7 UTA           71 8.03e-5     791
+ 8 LAL           65 8.51e-5     582
+ 9 OKC           55 8.70e-5     611
+10 HOU           70 8.74e-5    1140
+# ... with 20 more rows, and 11 more
+#   variables: points2 <int>,
+#   points1 <int>, points <int>,
+#   off_rebounds <int>,
+#   def_rebounds <int>, assists <int>,
+#   steals <int>, blocks <int>,
+#   turnovers <int>, fouls <int>,
+#   efficiency <dbl>
+# A tibble: 477 x 42
+   player number team  position height
+   <chr>  <chr>  <chr> <chr>    <chr> 
+ 1 Pierr~ 55     DAL   PG       5-10  
+ 2 Tyler~ 8      PHO   PG       5-10  
+ 3 Ty La~ 10     SAC   PG       5-11  
+ 4 John ~ 11     MIN   PG       5-11  
+ 5 Isaia~ 4      BOS   PG       5-9   
+ 6 Kay F~ 20     CLE   PG       5-9   
+ 7 Fred ~ 23     TOR   PG       6-0   
+ 8 Kyle ~ 7      TOR   PG       6-0   
+ 9 Aaron~ 0      IND   PG       6-0   
+10 Isaia~ 0      CHI   SG       6-0   
+# ... with 467 more rows, and 37 more
+#   variables: weight <int>,
+#   birth_date <chr>, country <chr>,
+#   experience <int>, college <chr>,
+#   salary <dbl>, rank <int>,
+#   age <int>, games <int>,
+#   games_started <int>,
+#   minutes <int>, field_goals <int>,
+#   field_goals_atts <int>,
+#   field_goals_perc <dbl>,
+#   points3 <int>, points3_atts <int>,
+#   points3_perc <dbl>, points2 <int>,
+#   points2_atts <int>,
+#   points2_perc <dbl>,
+#   effective_field_goal_perc <dbl>,
+#   points1 <int>, points1_atts <int>,
+#   points1_perc <dbl>,
+#   off_rebounds <int>,
+#   def_rebounds <int>,
+#   total_rebounds <int>,
+#   assists <int>, steals <int>,
+#   blocks <int>, turnovers <int>,
+#   fouls <int>, points <int>,
+#   missed_fg <int>, missed_ft <int>,
+#   rebounds <int>, efficiency <dbl>
